@@ -2,13 +2,14 @@ import React from 'react';
 
 import './styles/scss/app.scss';
 
-import { Header } from './components';
+import { Header, Top } from './components';
 
 function App() {
   return (
-    <div className='wrapper'>
+    <>
       <Header />
-    </div>
+      <Top />
+    </>
   );
 }
 

@@ -6,14 +6,9 @@
 
 @import 'components/all';
 
-body {
-  background-color: $background;
-}
-
-.wrapper {
+.container {
   width: calc(100vw - 100px);
   height: 100%;
-  background-color: $black;
   margin: 0px auto;
   max-width: 1280px;
 }
