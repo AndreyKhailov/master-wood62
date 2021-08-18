@@ -1,0 +1,74 @@
+@import '../constants';
+@import '../vars';
+
+.works {
+  background-color: $black;
+  padding: 120px 0;
+  &__inner {
+    display: grid;
+    place-content: center;
+    grid-row-gap: 80px;
+    grid-column-gap: 80px;
+    grid-template-areas:
+      'left right'
+      'sec-1 sec-3'
+      'sec-2 sec-4'
+      'sec-5 sec-5';
+  }
+  &__line-right {
+    grid-area: right;
+    margin-left: auto;
+  }
+  &__line-left {
+    grid-area: left;
+  }
+  &__line-right,
+  &__line-left {
+    width: 200px;
+    border-bottom: 2px solid $orange;
+  }
+  &__section-1 {
+    grid-area: sec-1;
+  }
+  &__section-2 {
+    grid-area: sec-2;
+  }
+  &__section-3 {
+    grid-area: sec-3;
+  }
+  &__section-4 {
+    grid-area: sec-4;
+  }
+  &__section-5 {
+    grid-area: sec-5;
+    margin: 0 auto;
+  }
+  &__section-1,
+  &__section-2,
+  &__section-3,
+  &__section-4,
+  &__section-5 {
+    display: flex;
+    align-items: center;
+    width: 420px;
+  }
+  &__titile {
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+    margin-bottom: 20px;
+  }
+  &__section-num {
+    color: $orange;
+    font-size: 60px;
+    line-height: 73px;
+    letter-spacing: 0.05em;
+    margin-right: 25px;
+  }
+  &__section-text {
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05em;
+    color: $white;
+  }
+}
