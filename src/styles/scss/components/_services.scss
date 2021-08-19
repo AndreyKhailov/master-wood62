@@ -58,7 +58,7 @@
   &__works-2:hover,
   &__works-3:hover {
     cursor: pointer;
-    background: linear-gradient($silver-gray, $gray-black);
+    background: linear-gradient(to top right, $gray-black, $silver-gray 40%);
   }
   &__works-title {
     color: $white;
