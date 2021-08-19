@@ -1,0 +1,88 @@
+@import '../constants';
+@import '../vars';
+
+.services {
+  background-color: $black;
+  padding: 100px 0;
+  &__title {
+    color: $white;
+    text-align: center;
+    font-size: 30px;
+    line-height: 37px;
+    text-transform: uppercase;
+    &-line {
+      border-bottom: 3px solid $orange-light;
+      margin: 20px auto 64px;
+      width: 300px;
+    }
+  }
+  &__inner {
+    display: grid;
+    grid-template-areas: 'works list';
+    justify-content: center;
+    column-gap: 25px;
+  }
+  &__works {
+    grid-area: works;
+  }
+  &__works-1 {
+    background-image: url('../../img/finishing.png');
+  }
+  &__works-2 {
+    background-image: url('../../img/house.png');
+  }
+  &__works-3 {
+    background-image: url('../../img/electrician.jpg');
+  }
+  &__works-4 {
+    background-image: url('../../img/plumbing.png');
+  }
+  &__works-1,
+  &__works-2,
+  &__works-3,
+  &__works-4 {
+    background-position: center;
+    width: 386px;
+    height: 177px;
+    border: 4px solid $orange-light;
+    border-radius: 5px;
+  }
+  &__works-1,
+  &__works-2,
+  &__works-3 {
+    margin-bottom: 8px;
+  }
+  &__works-title {
+    color: $white;
+    text-align: center;
+    margin-top: 70px;
+  }
+  &__works-icon {
+    margin: 30px 10px 0;
+  }
+  &__list {
+    grid-area: list;
+    width: 550px;
+    border: 4px solid $orange-light;
+    border-radius: 5px;
+    &-title {
+      font-size: 24px;
+      line-height: 29px;
+      letter-spacing: 0.05em;
+      color: $orange-light;
+      text-align: center;
+      margin: 40px 0 50px;
+    }
+    & ul {
+      display: table;
+      margin: 0 auto;
+    }
+    &-item {
+      font-size: 18px;
+      line-height: 32px;
+      letter-spacing: 0.05em;
+      color: $white;
+      margin: 0 auto;
+    }
+  }
+}
