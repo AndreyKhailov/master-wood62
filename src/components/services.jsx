@@ -5,27 +5,85 @@ import house__svg from '../styles/img/svg/house.svg';
 import electrician__svg from '../styles/img/svg/electrician.svg';
 import plumbing__svg from '../styles/img/svg/plumbing.svg';
 
-const servivesList = [
-    'Перенос и установка счетчиков',
-    'Монтаж и ремонт водопровода',
-    'Монтаж отопления',
-    'Монтаж канализации',
-    'Замена и перенос  полотенцесушителя',
-    'Установка кранов на полотенцесушитель',
-    'Установка инсталляций',
-    'Установка всех видов сантех оборудования',
-    'Замена батарей отопления',
-    'Замена и демонтаж радиатора отопления',
-    'Замена труб в ванной и туалете',
-    'Замена труб в ванной',
-    'Замена труб на пластиковые',
-    'Монтаж трубопроводов ПВХ',
-    'Замена и демонтаж радиатора отопления',
+const servives = [
+    {
+        id: 0,
+        title: 'Отделочные работы',
+        img: finishing__svg,
+        alt: 'finishing',
+        list: [
+            'Электромонтажные и сантехнические работы',
+            'Демонтажные работы',
+            'Штукатурные работы',
+            'Малярные работы',
+            'Монтаж ГКЛ',
+            'Облицовка стен и потолков',
+            'Укладка плитки',
+            'Укладка всех видов наполных покрытий',
+        ]
+    },
+    {
+        id: 1,
+        title: 'Строительство',
+        img: house__svg,
+        alt: 'house',
+        list: [
+            'Профессиональная укладка блоков ПГС',
+            'Укладка кирпича',
+            'Укладка пазогребневых плит',
+            'Монтаж плит',
+            'Монтаж перекрытий',
+            'Монтаж балок и пермычек',
+            'Изготовление монолитного пола',
+            'Установка перегородок',
+            'Установка вентиляционных каналов',
+            'Кровельные работы любой сложности',
+        ]
+    },
+    {
+        id: 2,
+        title: 'Электрика',
+        img: electrician__svg,
+        alt: 'electrician',
+        list: [
+            'Замена розеток и выключателей',
+            'Перенос розеток и выключателей',
+            'Замена электропроводки',
+            'Сборка электросчетчиков',
+            'Установка электросчетчиков',
+        ]
+    },
+    {
+        id: 3,
+        title: 'Сантехника',
+        img: plumbing__svg,
+        alt: 'plumbing',
+        list: [
+            'Перенос и установка счетчиков',
+            'Монтаж и ремонт водопровода',
+            'Монтаж отопления',
+            'Монтаж канализации',
+            'Замена и перенос  полотенцесушителя',
+            'Установка кранов на полотенцесушитель',
+            'Установка инсталляций',
+            'Установка всех видов сантех оборудования',
+            'Замена батарей отопления',
+            'Замена и демонтаж радиатора отопления',
+            'Замена труб в ванной и туалете',
+            'Замена труб в ванной',
+            'Замена труб на пластиковые',
+            'Монтаж трубопроводов ПВХ',
+            'Замена и демонтаж радиатора отопления',
+        ]
+    }
 ]
 
-
-
 function Services() {
+    const [currentService, setCurrentService] = React.useState(0);
+    const handleClick = (id) => {
+        setCurrentService(id);
+    };
+
     return (
         <div className='services'>
             <div className="container">
@@ -33,29 +91,24 @@ function Services() {
                 <div className="services__title-line" />
                 <div className="services__inner">
                     <section className="services__works">
-                        <div className="services__works-1">
-                            <h3 className="services__works-title">Отделочные работы</h3>
-                            <img className="services__works-icon" src={finishing__svg} alt="finishing" />
-                        </div>
-                        <div className="services__works-2">
-                            <h3 className="services__works-title">Строительство</h3>
-                            <img className="services__works-icon" src={house__svg} alt="house" />
-                        </div>
-                        <div className="services__works-3">
-                            <h3 className="services__works-title">Электрика</h3>
-                            <img className="services__works-icon" src={electrician__svg} alt="electrician" />
-                        </div>
-                        <div className="services__works-4">
-                            <h3 className="services__works-title">Сантехника</h3>
-                            <img className="services__works-icon" src={plumbing__svg} alt="plumbing" />
-                        </div>
+                        {
+                            servives.map(({id, title, img, alt}) => (
+                                <div className={`services__works-${id}`} 
+                                    key={`${id}_${title}`}
+                                    onClick={() => handleClick(id)}
+                                >
+                                    <h3 className="services__works-title">{title}</h3>
+                                    <img className="services__works-icon" src={img} alt={alt} />
+                                </div>
+                            ))
+                        }
                     </section>
                     <section className="services__list">
-                        <h3 className="services__list-title">Сантехника</h3>
+                        <h3 className="services__list-title">{servives[currentService].title}</h3>
                         <ul>
                             {
-                                servivesList.map((item, index) => (
-                                    <li className="services__list-item" key={index}>- {item}</li>
+                                servives[currentService].list.map((list, index) => (
+                                    <li className="services__list-item" key={index}>- {list}</li>
                                 ))
                             }
                         </ul> 
