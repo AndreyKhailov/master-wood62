@@ -80,7 +80,8 @@ const servives = [
 
 function Services() {
     const [currentService, setCurrentService] = React.useState(0);
-    const handleClick = (id) => {
+    
+    const onHandleClickWorks = (id) => {
         setCurrentService(id);
     };
 
@@ -95,7 +96,7 @@ function Services() {
                             servives.map(({id, title, img, alt}) => (
                                 <div className={`services__works-${id}`} 
                                     key={`${id}_${title}`}
-                                    onClick={() => handleClick(id)}
+                                    onClick={() => onHandleClickWorks(id)}
                                 >
                                     <h3 className="services__works-title">{title}</h3>
                                     <img className="services__works-icon" src={img} alt={alt} />
