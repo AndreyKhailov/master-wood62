@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/scss/app.scss';
 
-import { Header, Top, About, Works, Services } from './components';
+import { Header, Top, About, Works, Services, Form } from './components';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
       <About />
       <Works />
       <Services />
+      <Form />
     </>
   );
 }
