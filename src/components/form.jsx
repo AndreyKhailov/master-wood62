@@ -42,7 +42,7 @@ function Form() {
                                 onChange=''
                                 placeholder='+7(000)000-00-00 *'
                             />
-                            <label htmlFor='phone'>Номер телефона *</label>
+                            <label htmlFor='phone'>Номер телефона</label>
                         </section>
 
                         <section className="form__section">
