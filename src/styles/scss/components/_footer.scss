@@ -94,7 +94,8 @@
   }
   &__form-section label {
     color: #e0e0e0;
-    background-color: rgb(10, 10, 10);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     font-size: 16px;
     line-height: 16px;
     padding: 5px 60px 5px 10px;
