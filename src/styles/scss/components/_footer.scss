@@ -3,6 +3,7 @@
 
 .footer {
   &__top {
+    background-color: $black;
     background-image: linear-gradient(rgba(20, 20, 20, 0.75), rgba(5, 5, 5, 0.85)),
       url('../../img/footer-bg-3.jpg');
     background-repeat: no-repeat;
