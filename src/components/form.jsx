@@ -1,7 +1,11 @@
 import React from 'react';
 
-function Form() {
+function Form({ setModalActive }) {
     const [data, setData] = React.useState({});
+
+    const onClickUserConifrm = () => {
+        setModalActive(true);
+    };
 
     return (
         <div className='form'>
@@ -65,7 +69,9 @@ function Form() {
                                 onChange=''
                             />
                             <label htmlFor='checkbox'></label>
-                            <p>Настоящим подтверждаю, что я ознакомлен и согласен с <a href='index.js'>пользовательским соглашением</a></p>
+                            <p>Настоящим подтверждаю, что я ознакомлен и согласен с 
+                                <button onClick={onClickUserConifrm}>пользовательским соглашением</button>
+                            </p>
                         </section> 
 
                         <section className="form__section-btn">

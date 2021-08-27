@@ -1,0 +1,52 @@
+@import '../../constants';
+@import '../../vars';
+
+.modal {
+  &__wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba($black, 0.7);
+    backdrop-filter: blur(6px);
+  }
+  &__body {
+    max-width: 500px;
+    margin: auto;
+    margin-top: calc(35vh - 50px);
+    background: $white;
+    padding: 20px;
+    border-radius: 10px;
+    height: 100%;
+    max-height: 500px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      width: 0;
+      background: transparent;
+    }
+  }
+  &__btn-close {
+    text-align: end;
+    font-size: 30px;
+    margin-top: -15px;
+    color: $black;
+    cursor: pointer;
+    &:hover {
+      color: $redup;
+    }
+  }
+  & h2 {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.modal__wrapper.open {
+  height: 100%;
+  display: block;
+}
+.modal__wrapper.close {
+  height: 0;
+  display: none;
+}

@@ -95,9 +95,16 @@
     color: #adb5bd;
     margin-left: 16px;
   }
-  &__section-checkbox a {
-    color: #adb5bd;
-    border-bottom: 1px dashed $orange;
+  &__section-checkbox button {
+    color: #e0e0e0;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    background-color: transparent;
+    border-bottom: 1px dashed $orange-light;
+    &:hover {
+      color: $orange-light;
+    }
   }
   &__checkbox:checked,
   &__checkbox:not(:checked) {

@@ -3,8 +3,11 @@ import React from 'react';
 import './styles/scss/app.scss';
 
 import { Header, Top, About, Works, Services, Form, Footer, Gallery } from './components';
+import Modal from './components/assets/modal.jsx';
 
 function App() {
+  const [modalActive, setModalActive] = React.useState(false);
+
   return (
     <>
       <Header />
@@ -12,9 +15,10 @@ function App() {
       <About />
       <Works />
       <Services />
-      <Form />
+      <Form setModalActive={setModalActive} />
       <Gallery />
-      <Footer />
+      <Footer setModalActive={setModalActive} />
+      <Modal isOpened={modalActive} setModalActive={setModalActive} />
     </>
   );
 }

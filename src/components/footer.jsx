@@ -1,13 +1,17 @@
 import React from 'react';
 
-import location__svg from '../styles/img/svg/location.svg'
-import phone__svg from '../styles/img/svg/call.svg'
-import email__svg from '../styles/img/svg/emailForFooter.svg'
-import time__svg from '../styles/img/svg/earth.svg'
-import arrow__svg from '../styles/img/svg/rightArrow.svg'
+import location__svg from '../styles/img/svg/location.svg';
+import phone__svg from '../styles/img/svg/call.svg';
+import email__svg from '../styles/img/svg/emailForFooter.svg';
+import time__svg from '../styles/img/svg/earth.svg';
+import arrow__svg from '../styles/img/svg/rightArrow.svg';
 
-function Footer() {
+function Footer({ setModalActive }) {
     const [dataForm, setDataForm] = React.useState('');
+
+    const onClickUserConifrm = () => {
+        setModalActive(true);
+    };
 
     return (
         <>
@@ -111,7 +115,9 @@ function Footer() {
                                         onChange=''
                                     />
                                     <label htmlFor='checkbox'></label>
-                                    <p>Настоящим подтверждаю, что я ознакомлен и согласен с <a href='index.js'>пользовательским соглашением</a></p>
+                                    <p>Настоящим подтверждаю, что я ознакомлен и согласен с 
+                                        <button onClick={onClickUserConifrm}>пользовательским соглашением</button>
+                                    </p>
                                 </section> 
                                 <section className="footer__section-btn">
                                     <button 
