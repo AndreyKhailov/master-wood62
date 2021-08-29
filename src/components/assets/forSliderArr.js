@@ -72,7 +72,6 @@ import other7 from '../../styles/img/forSlider/otherWorks/other7.webp';
 import other8 from '../../styles/img/forSlider/otherWorks/other8.webp';
 import other9 from '../../styles/img/forSlider/otherWorks/other9.webp';
 import other10 from '../../styles/img/forSlider/otherWorks/other10.webp';
-import other11 from '../../styles/img/forSlider/otherWorks/other11.webp';
 
 const arrayOfBuildingImg = [
   build1,
@@ -153,7 +152,6 @@ const arrayOfOtherWorksImg = [
   other8,
   other9,
   other10,
-  other11,
 ];
 
 export const arrOfImg = [
