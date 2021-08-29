@@ -58,7 +58,7 @@ function Header() {
                             <span className='header__info-text'>+7(000)000-00-00</span>
                         </a>
                         <a className='header__info-email'
-                            href='mailto:woodworks62@yandex.ru?subject=Woodworks62'
+                            href='mailto:woodworks62@gamil.com?subject=Woodworks62'
                             target='_blank' 
                             rel='noopener noreferrer'
                         >

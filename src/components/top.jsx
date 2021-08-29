@@ -32,7 +32,7 @@ function Top() {
                             </p>
                         </div>
                         <div className='top__block-2'>
-                            <h4>Изготовлеине:</h4>
+                            <h4>Изготовление:</h4>
                             <p>
                                 <span className='top__block-item'>столов</span>
                                 <span className='top__block-item'>стульев</span>

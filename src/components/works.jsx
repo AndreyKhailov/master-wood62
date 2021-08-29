@@ -10,15 +10,15 @@ function Works() {
                     <div className='works__line-left' />
                     <div className="works__section-1">
                         <span className="works__section-num">01</span>
-                        <p className="works__section-text">Бесплатный выезд мастера на объект для оценки работы </p>
+                        <p className="works__section-text">Выезд мастера на объект для оценки работы </p>
                     </div>
                     <div className="works__section-2">
                         <span className="works__section-num">02</span>
-                        <p className="works__section-text">Обсуждение работы с заказчиком </p>
+                        <p className="works__section-text">Обсуждение оказываемых услуг с заказчиком </p>
                     </div>
                     <div className="works__section-3">
                         <span className="works__section-num">03</span>
-                        <p className="works__section-text">Оформление и подписание договора</p>
+                        <p className="works__section-text">Предоставление проекта и плана работ</p>
                     </div>
                     <div className="works__section-4">
                         <span className="works__section-num">04</span>

@@ -15,7 +15,7 @@ function App() {
       <About />
       <Works />
       <Services />
-      <Form setModalActive={setModalActive} />
+      {/* <Form setModalActive={setModalActive} /> */}
       <Gallery />
       <Footer setModalActive={setModalActive} />
       <Modal isOpened={modalActive} setModalActive={setModalActive} />
