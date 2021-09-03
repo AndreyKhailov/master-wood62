@@ -86,7 +86,7 @@ function Services() {
     };
 
     return (
-        <div className='services'>
+        <div id='services' className='services'>
             <div className="container">
                 <h2 className="services__title">Наши услуги</h2>
                 <div className="services__title-line" />

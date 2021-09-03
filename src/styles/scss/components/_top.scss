@@ -14,7 +14,6 @@
     justify-content: space-between;
   }
   &__title {
-    margin-bottom: 45px;
     text-transform: uppercase;
     padding-top: 30vh;
   }
@@ -24,7 +23,7 @@
   &__title-4,
   &__title-5,
   &__title-6 {
-    text-shadow: 1px 1px 15px rgba(2, 2, 2, 0.95);
+    text-shadow: -5px -4px 2px rgba(2, 2, 2, 0.95);
 
     @extend %sf-semibold;
   }
@@ -105,5 +104,141 @@
     padding: 2px;
     border-radius: 6px;
     white-space: nowrap;
+  }
+}
+
+@media (max-width: 950px) {
+  .top {
+    &__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__title {
+      padding-top: 26vh;
+    }
+    &__title-1 {
+      font-size: 42px;
+    }
+    &__title-2 {
+      font-size: 38px;
+    }
+    &__title-3 {
+      font-size: 36px;
+    }
+    &__title-4 {
+      font-size: 34px;
+    }
+    &__title-5 {
+      font-size: 34px;
+    }
+    &__title-6 {
+      font-size: 24px;
+    }
+    &__blocks {
+      align-items: center;
+      padding-top: 25vh;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .top {
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__title {
+      padding-top: 22vh;
+    }
+
+    &__title-1 {
+      font-size: 38px;
+      margin: 0 0 34px;
+    }
+    &__title-2 {
+      font-size: 34px;
+      margin: 0 60px 34px;
+    }
+    &__title-3 {
+      font-size: 32px;
+      margin-bottom: 34px;
+      margin-left: 10px;
+    }
+    &__title-4 {
+      font-size: 30px;
+      margin: 0 20px 0 0;
+    }
+    &__title-5 {
+      font-size: 30px;
+      margin: 0 0 0 30px;
+    }
+    &__title-6 {
+      font-size: 20px;
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    &__blocks {
+      flex-direction: row;
+      align-items: flex-start;
+      max-width: 90%;
+      padding-top: 0;
+      margin-top: 5vh;
+      & h4 {
+        font-size: 18px;
+        margin: 0 0 2px 0;
+      }
+    }
+    &__title-text {
+      margin-left: 20px;
+    }
+    &__block-1 {
+      margin-right: 10px;
+    }
+    &__block-item {
+      font-size: 18px;
+      margin: 1px;
+    }
+  }
+}
+@media (max-width: 580px) {
+  .top {
+    &__title-1 {
+      font-size: 30px;
+      margin: 0 0 22px;
+    }
+    &__title-2 {
+      font-size: 29px;
+      margin: 0 60px 22px;
+    }
+    &__title-3 {
+      font-size: 26px;
+      margin-bottom: 22px;
+    }
+    &__title-4 {
+      font-size: 24px;
+      margin: 0 20px 0 0;
+    }
+    &__title-5 {
+      font-size: 24px;
+      margin: 0 0 0 22px;
+    }
+    &__title-6 {
+      margin-bottom: 12px;
+    }
+    &__title-text {
+      display: none;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .constainer {
+    display: none;
+  }
+  .top {
+    &__block-item {
+      white-space: pre-wrap;
+    }
   }
 }

@@ -13,9 +13,9 @@ function Modal({isOpened, setModalActive}) {
                     className="modal__btn-close"
                     onClick={onModalClose}
                 >
-                    x
+                   Закрыть Х
                 </div>
-                <h2>СОГЛАСИЕ</h2>
+                <h3>СОГЛАСИЕ</h3>
                 <hr />
                 <p>
                     на обработку персональных данных

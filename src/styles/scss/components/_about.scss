@@ -59,3 +59,68 @@
     letter-spacing: 0.05em;
   }
 }
+
+@media (max-width: 980px) {
+  .about {
+    padding: 100px 0;
+    &__text-title {
+      font-size: 60px;
+      margin-bottom: 32px;
+    }
+    &__circle {
+      width: 240px;
+      height: 240px;
+      border-radius: 240px;
+    }
+    &__info-item:nth-child(odd) {
+      margin: 12px 0;
+    }
+    &__info-item:nth-child(2) {
+      font-size: 80px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .about {
+    padding: 40px 0;
+    &__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+    &__text-title {
+      font-size: 45px;
+    }
+    &__circle {
+      width: 240px;
+      height: 240px;
+      border-radius: 240px;
+      margin-top: 25px;
+    }
+  }
+}
+@media (max-width: 450px) {
+  .about {
+    &__text-item {
+      white-space: nowrap;
+      padding-right: 6px;
+      margin-bottom: 22px;
+    }
+    &__circle {
+      width: 140px;
+      height: 140px;
+      border-radius: 140px;
+      margin-top: 12px;
+    }
+    &__info-item:nth-child(odd) {
+      margin: 14px 0;
+      font-size: 18px;
+    }
+    &__info-item:nth-child(2) {
+      font-size: 42px;
+      line-height: 18px;
+    }
+  }
+}

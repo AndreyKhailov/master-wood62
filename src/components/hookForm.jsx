@@ -10,11 +10,33 @@ const initialState = {
     isChecked: true,
 };
 
+// ********************************************************************
+// ********************************************************************
+
+function useInputsData(defaultValue = '') {
+  const [value, setValue] = React.useState(defaultValue);
+
+  return {
+    bind: {
+      value,
+      onChange: event => setValue(event.target.value)
+    },
+    clear: () => setValue(''),
+    value: () => value
+  }
+}
+
+// ********************************************************************
+// ********************************************************************
+
 function Form({ setModalActive }) {
     const [data, setData] = React.useState(initialState);
     const [resultSend, setResultSend] = React.useState('');
 
+    const input = useInputsData('')
+
     const onHandleChange = (e) => {
+
 
         const target = e.target;
         const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -37,21 +59,16 @@ function Form({ setModalActive }) {
             phone: data.phone,
             message: data.message,
         };
-        if((data.name && data.email) !== '' ) {
-            emailjs.send('service_il6d3e8', 'template_r5bv7g9', templateParams, 'user_76axNdhbPsRrEwNKvdSqq')
-                .then(() => {
-    
-                        setResultSend('SUCCESS');
-                        setData(initialState);
-                }, 
-                    () => { setResultSend('FAILED') }
-                );
-                setTimeout(() => { setResultSend('') }, 5000);
-        } else {
-            setResultSend('FAILED');
-            setTimeout(() => { setResultSend('') }, 5000);
-        }
+         
+        emailjs.send('service_il6d3e8', 'template_r5bv7g9', templateParams, 'user_76axNdhbPsRrEwNKvdSqq')
+            .then(() => {
 
+                    setResultSend('SUCCESS');
+                    setData(initialState);
+            }, 
+                () => { setResultSend('FAILED') }
+            );
+            setTimeout(() => { setResultSend('') }, 5000);
     };
 
     return (
@@ -126,6 +143,7 @@ function Form({ setModalActive }) {
                             ? ( <p className="footer__send-failed">Ошибка! Сообщение не было отправлено. Повторите попытку</p>) 
                                 : null
                         }
+
                     </div>
                 </section>
             </div>

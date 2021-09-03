@@ -65,7 +65,7 @@ function Gallery() {
     };
     
     return (
-        <div className='gallery'>
+        <div id='gallery' className='gallery'>
             <Slider 
                 id={currentID}
                 isOpenSlider={isActiveSlider}
@@ -73,7 +73,7 @@ function Gallery() {
             />
             <div className="container">
                 <h2 className="gallery__title">Галерея работ</h2>
-                <div className="services__title-line" />
+                <div className="gallery__title-line" />
                 <div className="gallery__sections">
                     {
                         dataGallery.map(({id, text, label, img, alt}) => (

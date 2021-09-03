@@ -210,7 +210,6 @@
   &__form-btn {
     font-weight: 600;
     font-size: 16px;
-    line-height: 20px;
     letter-spacing: 0.05em;
     color: #e0e0e0;
     background-color: transparent;
@@ -223,6 +222,68 @@
       background-color: $orange-light;
       border: 1px solid $orange-light;
       color: $black;
+    }
+  }
+  &__section-send {
+    width: 100%;
+    height: 50px;
+    margin-top: 16px;
+  }
+  &__send-success,
+  &__send-failed {
+    font-size: 16px;
+    text-align: center;
+  }
+  &__send-success {
+    color: rgb(18, 197, 18);
+  }
+  &__send-failed {
+    color: $redup;
+  }
+}
+.desable {
+  opacity: 0.7;
+  border: 1px solid $redup;
+  color: $redup;
+  &:hover,
+  &:focus {
+    cursor: not-allowed;
+    background: transparent;
+    border: 1px solid $redup;
+    color: $redup;
+  }
+}
+
+@media (max-width: 930px) {
+  .footer {
+    &__services {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .footer {
+    &__top {
+      padding: 0;
+      & h3 {
+        margin-bottom: 12px;
+      }
+    }
+    &__top-inner {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    &__contacts {
+      margin-bottom: 25px;
+    }
+    &__services {
+      display: none;
+    }
+    &__bottom {
+      height: 40px;
     }
   }
 }
