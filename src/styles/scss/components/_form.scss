@@ -41,7 +41,6 @@
     line-height: 16px;
     height: 45px;
     padding: 0 20px;
-    width: 100%;
   }
   &__section label {
     color: $white;
@@ -176,6 +175,15 @@
       background-color: $white;
       opacity: 0.9;
       color: $black;
+    }
+  }
+}
+
+@media (max-width: 325px) {
+  .form {
+    &__sections {
+      width: 200px;
+      margin: 10px auto;
     }
   }
 }

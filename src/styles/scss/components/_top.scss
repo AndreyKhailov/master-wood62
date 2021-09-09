@@ -255,18 +255,18 @@
     }
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 370px) {
   .top {
     &__blocks {
       & h4 {
-        font-size: 14px;
+        font-size: 15px;
       }
     }
     &__title-text {
       margin-left: 20px;
     }
     &__block-item {
-      font-size: 14px;
+      font-size: 15px;
     }
   }
 }

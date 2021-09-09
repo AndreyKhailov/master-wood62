@@ -279,11 +279,29 @@
     &__contacts {
       margin-bottom: 25px;
     }
-    &__services {
-      display: none;
-    }
     &__bottom {
       height: 40px;
+    }
+  }
+}
+@media (max-width: 325px) {
+  .footer {
+    &__form-sections {
+      width: 100%;
+      margin: 20px auto;
+    }
+    &__contacts,
+    &__services,
+    &__form {
+      margin: 0 5px;
+    }
+    &__contacts-item,
+    &__services-item {
+      padding: 0 5px 0 5px;
+      & span {
+        font-size: 16px;
+        margin-left: 10px;
+      }
     }
   }
 }
