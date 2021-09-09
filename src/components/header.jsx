@@ -67,11 +67,11 @@ function Header() {
                 </nav>
                 <div className='header__info'>
                     <a className='header__info-email'
-                        href='mailto:woodworks62@gamil.com?subject=Woodworks62'
+                        href='mailto:woodworker.s62@gmail.com?subject=woodworker62'
                         target='_blank' 
                         rel='noopener noreferrer'
                     >
-                        <img className='header__info-svg' src={email_svg}  alt='email'/>
+                        <img className='header__info-svg' src={email_svg} alt='email'/>
                         <span className='header__info-text'>
                             <abbr title="woodworker.s62@gmail.com">e-mail</abbr>
                         </span>
@@ -83,7 +83,7 @@ function Header() {
                     >
                         <img className='header__info-svg' src={phone_svg} alt='phone'/>
                         <span className='header__info-text'>
-                            <abbr title="+7(000)000-00-00">whatsApp</abbr>
+                            <abbr title="+7(000)000-00-00">Позвонить</abbr>
                         </span>
                     </a>
                 </div>
