@@ -129,3 +129,19 @@
     }
   }
 }
+@media (max-width: 415px) {
+  .works {
+    padding: 5px 0;
+  }
+}
+@media (max-width: 325px) {
+  .works {
+    &__section-1,
+    &__section-2,
+    &__section-3,
+    &__section-4,
+    &__section-5 {
+      width: 280px;
+    }
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import './styles/scss/app.scss';
 
-import { Header, Top, About, Works, Services, Form, Footer, Gallery } from './components';
+import { Header, Top, About, Works, Services, Footer, Gallery } from './components';
 import Modal from './components/assets/modal.jsx';
 
 function App() {
@@ -15,7 +15,6 @@ function App() {
       <About />
       <Works />
       <Services />
-      {/* <Form setModalActive={setModalActive} /> */}
       <Gallery />
       <Footer setModalActive={setModalActive} />
       <Modal isOpened={modalActive} setModalActive={setModalActive} />

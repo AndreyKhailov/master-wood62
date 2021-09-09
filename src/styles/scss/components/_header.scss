@@ -220,7 +220,7 @@
       z-index: 10;
       display: grid;
       place-items: center;
-      padding: 25vh;
+      padding: 25vh 0;
       font-size: 18px;
       font-weight: 400;
       background: rgba(#1c1c1c, 0.95);
@@ -269,5 +269,34 @@
     }
   }
 }
-@media (max-width: 480px) {
+@media (max-width: 375px) {
+  .header {
+    &__link-logo {
+      &::before {
+        transform: none;
+        width: 178px;
+        left: -10px;
+      }
+    }
+    &__logo-img {
+      width: 160px;
+      margin: 45px 0 0 4px;
+    }
+    &__info {
+      margin: 4px 8px;
+      &::before {
+        transform: none;
+        width: 130px;
+        top: 22px;
+        right: -10px;
+      }
+    }
+  }
+}
+@media (max-width: 325px) {
+  .header {
+    &__info {
+      display: none;
+    }
+  }
 }

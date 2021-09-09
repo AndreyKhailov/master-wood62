@@ -224,3 +224,38 @@
     width: 200px;
   }
 }
+@media (max-width: 415px) {
+  .services {
+    padding: 5px 0;
+  }
+}
+@media (max-width: 360px) {
+  .services {
+    &__inner {
+      column-gap: 6px;
+    }
+    &__works-0,
+    &__works-1,
+    &__works-2,
+    &__works-3,
+    &__list {
+      border: 2px solid $orange-light;
+    }
+    &__list {
+      width: 190px;
+      &-title {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media (max-width: 325px) {
+  .services {
+    &__list {
+      display: none;
+    }
+    &__title-line {
+      width: 180px;
+    }
+  }
+}
